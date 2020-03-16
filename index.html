@@ -1,1 +1,43 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<title>CodePen - 2026-5</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+<style>
+#firstdiv {
+  background:lightgrey;
+  font-size:30px;
+}
+</style>
+</head>
+<body translate="no">
+<div class="containter">
+<div class="row">
+<div class="col">
+Questions
+</div>
+<div class="col">
+Counter: <div id="firstdiv">100</div>
+</div>
+</div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+console.log("hello world");
+
+$("#firstdiv").text("100");
+
+function countDown(evt){
+  let counter = $("#firstdiv").text();
+  counter = counter - 1;
+  console.log(counter);
+  $("#firstdiv").text(counter);
+}
+
+countDown();
+setInterval(countDown,1000);
+    </script>
+</body>
+</html>
